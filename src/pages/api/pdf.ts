@@ -25,7 +25,9 @@ export const GET: APIRoute = async () => {
   } catch (err) {
     // In Vercel production static files are served from the `public` folder at their URL.
     // Reading from disk may fail in serverless environments, so fallback to redirecting
-    // the client to the public asset URL which Vercel will serve.
-    return Response.redirect(PUBLIC_ASSET_PATH, 302);
+    // the client to the public asset URL which Vercel will serve. Use an encoded URL
+    // to avoid issues with spaces in the filename.
+    const redirectUrl = encodeURI(PUBLIC_ASSET_PATH);
+    return Response.redirect(redirectUrl, 302);
   }
 };

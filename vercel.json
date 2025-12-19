@@ -5,6 +5,13 @@
       "headers": { "cache-control": "public, max-age=0, must-revalidate" }
     }
   ],
+  "redirects": [
+    {
+      "source": "/api/pdf",
+      "destination": "/assets/michael%20kachiwala%20SOFTWARE%20DEV%20CV.pdf",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*).pdf",
