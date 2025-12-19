@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { APIRoute } from 'astro';
 
-const PUBLIC_ASSET_PATH = '/assets/michael kachiwala SOFTWARE DEV CV.pdf';
+const PUBLIC_ASSET_PATH = '/assets/pdf.pdf';
 
 export const GET: APIRoute = async () => {
   const filePath = path.join(
