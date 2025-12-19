@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "src": "/api/pdf",
+      "headers": { "cache-control": "public, max-age=0, must-revalidate" }
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*).pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}
