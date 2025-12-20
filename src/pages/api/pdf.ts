@@ -9,7 +9,7 @@ export const GET: APIRoute = async () => {
     process.cwd(),
     'public',
     'assets',
-    'michael kachiwala SOFTWARE DEV CV.pdf'
+    'pdf.pdf'
   );
 
   try {
@@ -19,7 +19,7 @@ export const GET: APIRoute = async () => {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'inline; filename="michael-kachiwala-cv.pdf"',
+        'Content-Disposition': 'inline; filename="pdf.pdf"',
       },
     });
   } catch (err) {
